@@ -1,0 +1,26 @@
+
+-- create a clothing store database
+
+CREATE TABLE clothing_store (id INTEGER PRIMARY KEY, price INTEGER, color TEXT, size TEXT, gender TEXT);
+INSERT INTO clothing_store VALUES
+(1, 10, "pink", "small", "women"),
+(2, 15, "pink", "medium", "women"),
+(3, 20, "black", "large", "men"),
+(4, 25, "white", "small", "men"),
+(5, 5, "red", "medium", "women"),
+(6, 12, "black", "small", "women"),
+(7, 35, "blue", "large", "men");
+
+-- display database
+
+SELECT * FROM clothing_store;
+
+-- what is the average price in the clothing store?
+
+SELECT AVG(price) FROM clothing_store;
+
+-- what are the prices for women's clothes, ordered by price?
+
+SELECT * FROM clothing_store
+WHERE gender = "women"
+ORDER BY price;
